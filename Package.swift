@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/realm/realm-cocoa"
+            .package(url: "https://github.com/realm/realm-swift.git", .branch("master"))
         )
     ],
     targets: [

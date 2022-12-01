@@ -1,4 +1,3 @@
-// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -11,11 +10,15 @@ let package = Package(
             name: "IceCream",
             targets: ["IceCream"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(
+            url: "https://github.com/realm/realm-cocoa"
+        )
+    ],
     targets: [
         .target(
             name: "IceCream",
-            dependencies: [],
+            dependencies: ["RealmSwift", "Realm"],
             path: "IceCream",
             sources: ["Classes"])
     ],

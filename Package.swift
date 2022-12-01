@@ -1,3 +1,4 @@
+// swift-tools-version:5.1
 import PackageDescription
 
 let package = Package(
@@ -13,7 +14,7 @@ let package = Package(
     dependencies: [
                .package(
             url: "https://github.com/realm/realm-swift", 
-            from: "10.32.2"
+            .branch("master")
         )
     ],
     targets: [
